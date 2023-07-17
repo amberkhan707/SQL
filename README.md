@@ -1,2 +1,16 @@
 # SQL
 Here, you will learn SQL from basic to Advance
+
+
+# what is SQL(Structured Query Language)?  
+It is a Language that is used to Interact with Database.  
+  
+# Difference between SQL and MYSQL:
+| SQL                           | MYSQL                                                     |    
+| ----------------------------- | -------------                                             |   
+| it is a query language        | itself a RDBMS(Relational Data Base Mangement System      |   
+| way to access data            | server where data is accesed                              |   
+
+
+# install it in your PC   
+u can watch the process of installation above in installation file  
