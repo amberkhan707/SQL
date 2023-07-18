@@ -3,7 +3,7 @@ Here, you will learn SQL from basic to Advance
 
 
 # What is SQL(Structured Query Language)?  
-It is a Language that is used to Interact with Database.  
+It is a Language that is used to Interact with Database. It is used to create table from an ER Model.
   
 # Difference between SQL and MYSQL:
 | SQL                           | MYSQL                                                     |    
@@ -24,22 +24,15 @@ No need to learn all the Data types:
 
 1. **CHAR(size)**
    - Description: A fixed-length string that can contain letters, numbers, and special characters.
-   - Size Range: 0 to 255 characters.
-   - Default Size: 1 character.
 
 2. **VARCHAR(size)**
    - Description: A variable-length string that can contain letters, numbers, and special characters.
-   - Size Range: 0 to 65,535 characters.
-   - Default Size: 1 character.
 
 3. **BINARY(size)**
    - Description: Similar to CHAR(), but stores binary byte strings.
-   - Size Range: 0 to 255 bytes.
-   - Default Size: 1 byte.
 
 4. **VARBINARY(size)**
    - Description: Similar to VARCHAR(), but stores binary byte strings.
-   - Size Range: 0 to 65,535 bytes.
 
 5. **TINYBLOB**
    - Description: Used for BLOBs (Binary Large Objects) with a maximum length of 255 bytes.
@@ -67,94 +60,145 @@ No need to learn all the Data types:
 
 13. **ENUM(val1, val2, val3, ...)**
     - Description: A string object that can have only one value chosen from a list of possible values.
-    - Value Limit: Up to 65,535 values in the ENUM list.
 
 14. **SET(val1, val2, val3, ...)**
     - Description: A string object that can have 0 or more values chosen from a list of possible values.
-    - Value Limit: Up to 64 values in the SET list.  
 
   # Numeric Data Types
 
 1. **BIT(size)**
    - Description: A bit-value type with a specified number of bits per value.
-   - Size Range: 1 to 64 bits.
-   - Default Size: 1 bit.
-
+     
 2. **TINYINT(size)**
    - Description: A very small integer with both signed and unsigned ranges.
-   - Signed Range: -128 to 127.
-   - Unsigned Range: 0 to 255.
-   - Size Parameter: Maximum display width, up to 255.
 
 3. **BOOL / BOOLEAN**
    - Description: A boolean type where zero is considered false, and nonzero values are considered true.
 
 4. **SMALLINT(size)**
    - Description: A small integer with both signed and unsigned ranges.
-   - Signed Range: -32768 to 32767.
-   - Unsigned Range: 0 to 65535.
-   - Size Parameter: Maximum display width, up to 255.
 
 5. **MEDIUMINT(size)**
    - Description: A medium integer with both signed and unsigned ranges.
-   - Signed Range: -8388608 to 8388607.
-   - Unsigned Range: 0 to 16777215.
-   - Size Parameter: Maximum display width, up to 255.
 
 6. **INT(size) / INTEGER(size)**
    - Description: A medium integer with both signed and unsigned ranges.
-   - Signed Range: -2147483648 to 2147483647.
-   - Unsigned Range: 0 to 4294967295.
-   - Size Parameter: Maximum display width, up to 255.
 
 7. **BIGINT(size)**
-   - Description: A large integer with both signed and unsigned ranges.
-   - Signed Range: -9223372036854775808 to 9223372036854775807.
-   - Unsigned Range: 0 to 18446744073709551615.
-   - Size Parameter: Maximum display width, up to 255.
+   - Description: A large integer with both signed and unsigned ranges
 
 8. **FLOAT(size, d)**
    - Description: A floating-point number with a specified total number of digits and digits after the decimal point. *(Deprecated)*
 
-9. **FLOAT(p)**
-   - Description: A floating-point number. MySQL uses p to determine FLOAT or DOUBLE data type.
-   - If p is 0 to 24, the data type becomes FLOAT().
-   - If p is 25 to 53, the data type becomes DOUBLE().
-
-10. **DOUBLE(size, d)**
-    - Description: A normal-size floating-point number with a specified total number of digits and digits after the decimal point.
-
-11. **DOUBLE PRECISION(size, d)** (Equivalent to DOUBLE(size, d))
-
-12. **DECIMAL(size, d) / DEC(size, d)**
-    - Description: An exact fixed-point number with a specified total number of digits and digits after the decimal point.
-    - Size Range: Up to 65 digits.
-    - Decimal Range: Up to 30 digits.
-    - Default Size: 10 digits.
-    - Default Decimal: 0 digits.
-
-# Date and Time Data Types
-
 1. **DATE**
    - Description: A date in the format YYYY-MM-DD.
-   - Supported Range: '1000-01-01' to '9999-12-31'.
+    
+  check this link to learn more data type : (https://www.tutorialrepublic.com/sql-tutorial/sql-create-table-statement.php);  
 
-2. **DATETIME(fsp)**
-   - Description: A date and time combination in the format YYYY-MM-DD hh:mm:ss.
-   - Supported Range: '1000-01-01 00:00:00' to '9999-12-31 23:59:59'.
-   - Additional Options: DEFAULT and ON UPDATE in the column definition allow automatic initialization and updating to the current date and time.
 
-3. **TIMESTAMP(fsp)**
-   - Description: A timestamp, stored as the number of seconds since the Unix epoch ('1970-01-01 00:00:00' UTC).
-   - Format: YYYY-MM-DD hh:mm:ss.
-   - Supported Range: '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07' UTC.
-   - Additional Options: DEFAULT CURRENT_TIMESTAMP and ON UPDATE CURRENT_TIMESTAMP allow automatic initialization and updating to the current date and time.
+  # LEARN CODE:
+Let's take an example of bulding Banking RDBMS,  
 
-4. **TIME(fsp)**
-   - Description: A time in the format hh:mm:ss.
-   - Supported Range: '-838:59:59' to '838:59:59'.
+*create table of entity and table column will be its attributes*  
 
-5. **YEAR**
-   - Description: A year in four-digit format.
-   - Values Allowed: 1901 to 2155, and 0000.
-   - Note: MySQL 8.0 does not support the year in two-digit format.
+
+Customer Table:  
+customer_id: Unique identifier for each customer.  
+first_name: Customer's first name.  
+last_name: Customer's last name.  
+email: Customer's email address.  
+phone: Customer's phone number.  
+   
+  CREATE TABLE customer (  
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,  
+    first_name VARCHAR(50) NOT NULL,  
+    last_name VARCHAR(50) NOT NULL,  
+    email VARCHAR(100) NOT NULL,  
+    phone VARCHAR(20)  
+);  
+  
+  
+Designing a whole banking system involves a complex and comprehensive database schema. Below, I'll provide a high-level overview of the database schema for a basic banking system. Keep in mind that a real-world banking system would require much more detailed and sophisticated implementation, including security features, transaction handling, and compliance with banking regulations.
+
+Let's design the basic database schema for a banking system:
+
+Customer Table:
+customer_id: Unique identifier for each customer.
+first_name: Customer's first name.
+last_name: Customer's last name.
+email: Customer's email address.
+phone: Customer's phone number.
+sql
+Copy code
+CREATE TABLE customer (  
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,  
+    first_name VARCHAR(50) NOT NULL,  
+    last_name VARCHAR(50) NOT NULL,   
+    email VARCHAR(100) NOT NULL,  
+    phone VARCHAR(20)  
+);    
+   
+Account Table:  
+account_id: Unique identifier for each account.  
+customer_id: Foreign key referencing the customer_id in the customer table to associate accounts with a specific customer.  
+account_number: Unique account number.  
+balance: Current balance in the account.  
+  
+  CREATE TABLE account (
+    account_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    account_number VARCHAR(20) NOT NULL UNIQUE,
+    balance DECIMAL(15, 2) DEFAULT 0.00,
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);  
+
+Transaction Table:  
+transaction_id: Unique identifier for each transaction.  
+account_id: Foreign key referencing the account_id in the account table to associate transactions with a specific account.  
+transaction_type: Type of transaction (e.g., deposit, withdrawal, transfer).  
+amount: Transaction amount (positive for deposits, negative for withdrawals).  
+transaction_date: Timestamp for when the transaction occurred.  
+  
+ CREATE TABLE transaction (  
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,  
+    account_id INT NOT NULL,  
+    transaction_type VARCHAR(20) NOT NULL,  
+    amount DECIMAL(15, 2) NOT NULL,  
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
+    FOREIGN KEY (account_id) REFERENCES account(account_id)  
+);  
+
+  Loan Table:  
+loan_id: Unique identifier for each loan.  
+customer_id: Foreign key referencing the customer_id in the customer table to associate loans with a specific customer.   
+loan_amount: The initial loan amount.  
+interest_rate: The interest rate for the loan.  
+start_date: The start date of the loan.  
+end_date: The end date of the loan.  
+status: The status of the loan (e.g., active, paid off).  
+  
+ CREATE TABLE loan (  
+    loan_id INT PRIMARY KEY AUTO_INCREMENT,  
+    customer_id INT NOT NULL,  
+    loan_amount DECIMAL(15, 2) NOT NULL,  
+    interest_rate DECIMAL(5, 2) NOT NULL,  
+    start_date DATE NOT NULL,  
+    end_date DATE NOT NULL,  
+    status VARCHAR(20) NOT NULL,  
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id)  
+);  
+   
+  Loan Payment Table:  
+payment_id: Unique identifier for each loan payment.   
+loan_id: Foreign key referencing the loan_id in the loan table to associate payments with a specific loan.  
+payment_amount: The amount of the loan payment.  
+payment_date: Timestamp for when the payment was made.  
+    
+  CREATE TABLE loan_payment (  
+    payment_id INT PRIMARY KEY AUTO_INCREMENT,  
+    loan_id INT NOT NULL,  
+    payment_amount DECIMAL(15, 2) NOT NULL ,  
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
+    FOREIGN KEY (loan_id) REFERENCES loan(loan_id)  
+);  
+  
