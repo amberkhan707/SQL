@@ -16,85 +16,10 @@ It is a Language that is used to Interact with Database. It is used to create ta
 u can watch the process of installation above in installation file  
 
 # Datatypes  
-Sure, here's how you can document the data types in a README.md file:
-  
 No need to learn all the Data types:
 
 # Data Types for Database Columns  
-
-1. **CHAR(size)**
-   - Description: A fixed-length string that can contain letters, numbers, and special characters.
-
-2. **VARCHAR(size)**
-   - Description: A variable-length string that can contain letters, numbers, and special characters.
-
-3. **BINARY(size)**
-   - Description: Similar to CHAR(), but stores binary byte strings.
-
-4. **VARBINARY(size)**
-   - Description: Similar to VARCHAR(), but stores binary byte strings.
-
-5. **TINYBLOB**
-   - Description: Used for BLOBs (Binary Large Objects) with a maximum length of 255 bytes.
-
-6. **TINYTEXT**
-   - Description: Holds a string with a maximum length of 255 characters.
-
-7. **TEXT(size)**
-   - Description: Holds a string with a maximum length of 65,535 bytes.
-
-8. **BLOB(size)**
-   - Description: Used for BLOBs (Binary Large Objects) with a maximum length of 65,535 bytes.
-
-9. **MEDIUMTEXT**
-   - Description: Holds a string with a maximum length of 16,777,215 characters.
-
-10. **MEDIUMBLOB**
-    - Description: Used for BLOBs (Binary Large Objects) with a maximum length of 16,777,215 bytes.
-
-11. **LONGTEXT**
-    - Description: Holds a string with a maximum length of 4,294,967,295 characters.
-
-12. **LONGBLOB**
-    - Description: Used for BLOBs (Binary Large Objects) with a maximum length of 4,294,967,295 bytes.
-
-13. **ENUM(val1, val2, val3, ...)**
-    - Description: A string object that can have only one value chosen from a list of possible values.
-
-14. **SET(val1, val2, val3, ...)**
-    - Description: A string object that can have 0 or more values chosen from a list of possible values.
-
-  # Numeric Data Types
-
-1. **BIT(size)**
-   - Description: A bit-value type with a specified number of bits per value.
-     
-2. **TINYINT(size)**
-   - Description: A very small integer with both signed and unsigned ranges.
-
-3. **BOOL / BOOLEAN**
-   - Description: A boolean type where zero is considered false, and nonzero values are considered true.
-
-4. **SMALLINT(size)**
-   - Description: A small integer with both signed and unsigned ranges.
-
-5. **MEDIUMINT(size)**
-   - Description: A medium integer with both signed and unsigned ranges.
-
-6. **INT(size) / INTEGER(size)**
-   - Description: A medium integer with both signed and unsigned ranges.
-
-7. **BIGINT(size)**
-   - Description: A large integer with both signed and unsigned ranges
-
-8. **FLOAT(size, d)**
-   - Description: A floating-point number with a specified total number of digits and digits after the decimal point. *(Deprecated)*
-
-1. **DATE**
-   - Description: A date in the format YYYY-MM-DD.
-    
-  check this link to learn more data type : (https://www.tutorialrepublic.com/sql-tutorial/sql-create-table-statement.php);  
-
+you can refer notes from notessql file.
 
   # LEARN CODE:
 Let's take an example of bulding Banking RDBMS,  
