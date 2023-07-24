@@ -127,3 +127,6 @@ payment_date: Timestamp for when the payment was made.
     FOREIGN KEY (loan_id) REFERENCES loan(loan_id)  
 );  
   
+
+*Go through sql cheat sheet to memorize code *
+  
