@@ -128,5 +128,5 @@ payment_date: Timestamp for when the payment was made.
 );  
   
 
-*Go through sql cheat sheet to memorize code *
+*Go through sql cheat sheet to memorize code*
   
